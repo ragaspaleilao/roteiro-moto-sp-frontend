@@ -76,7 +76,7 @@ useEffect(() => {
     const token = localStorage.getItem('auth_token');
     if (token) {
       try {
-        const response = await fetch('http://127.0.0.1:5000/api/auth/check-membership', {
+        const response = await fetch('https://roteiro-moto-sp-backend.onrender.com/api/auth/check-membership', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -248,7 +248,7 @@ const handleSubscribe = async (priceId) => { // O parâmetro é 'priceId'
 
   try {
     const token = localStorage.getItem('auth_token');
-    const response = await fetch('http://127.0.0.1:5000/api/subscription/create-checkout-session', {
+    const response = await fetch('https://roteiro-moto-sp-backend.onrender.com/api/subscription/create-checkout-session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
